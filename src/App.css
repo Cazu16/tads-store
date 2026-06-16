@@ -1,0 +1,147 @@
+/* Configurações gerais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f4f6;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+}
+
+/* ==========================
+        Cabeçalho
+========================== */
+
+.cabecalho {
+  background: #111827;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho h1 {
+  font-size: 28px;
+}
+
+.cabecalho ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.cabecalho li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cabecalho li:hover {
+  color: #60a5fa;
+}
+
+/* ==========================
+          Vitrine
+========================== */
+
+.vitrine {
+  padding: 50px;
+  text-align: center;
+}
+
+.vitrine h2 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #1f2937;
+}
+
+/* Área dos produtos */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Card individual */
+
+.card {
+  background: white;
+  width: 230px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.card p {
+  color: #4b5563;
+  margin-top: 8px;
+}
+
+/* Selo */
+
+.selo {
+  background: #dc2626;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ==========================
+          Botão
+========================== */
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+/* ==========================
+          Rodapé
+========================== */
+
+.rodape {
+  margin-top: 60px;
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
