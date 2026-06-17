@@ -4,13 +4,15 @@ function ProdutoCard(props) {
   return (
     <div className="card">
 
-      <span className="selo">
-        {props.selo}
-      </span>
+      <img 
+        src={props.thumbnail} 
+        alt={props.title}
+        className="imagem-produto"
+      />
 
-      <h3>{props.nome}</h3>
+      <h3>{props.title}</h3>
 
-      <p>{props.preco}</p>
+      <p>R$ {props.price}</p>
 
       <Botao texto="Comprar" />
 

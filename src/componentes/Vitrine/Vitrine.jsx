@@ -1,36 +1,43 @@
+import { useState, useEffect } from "react";
 import ProdutoCard from "../ProdutoCard/ProdutoCard.jsx";
 
 function Vitrine() {
+  const [produtos, setProdutos] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+  const [erro, setErro] = useState(null);
 
-  const produtos = [
-    {
-      nome: "Notebook Gamer",
-      preco: "R$ 4.999,00",
-      selo: "Promoção"
-    },
-    {
-      nome: "Smartphone",
-      preco: "R$ 2.299,00",
-      selo: "Novo"
-    },
-    {
-      nome: "Fone Bluetooth",
-      preco: "R$ 299,00",
-      selo: "Mais vendido"
-    }
-  ];
+  useEffect(() => {
+    fetch("https://dummyjson.com/products?limit=12")
+      .then((resposta) => resposta.json())
+      .then((dados) => {
+        setProdutos(dados.products);
+        setCarregando(false);
+      })
+      .catch(() => {
+        setErro("Erro ao carregar os produtos.");
+        setCarregando(false);
+      });
+  }, []);
+
+  if (carregando) {
+    return <p>Carregando produtos...</p>;
+  }
+
+  if (erro) {
+    return <p>{erro}</p>;
+  }
 
   return (
     <main className="vitrine">
       <h2>Nossos Produtos</h2>
 
       <div className="cards">
-        {produtos.map((produto, index) => (
+        {produtos.map((produto) => (
           <ProdutoCard
-            key={index}
-            nome={produto.nome}
-            preco={produto.preco}
-            selo={produto.selo}
+            key={produto.id}
+            title={produto.title}
+            price={produto.price}
+            thumbnail={produto.thumbnail}
           />
         ))}
       </div>
