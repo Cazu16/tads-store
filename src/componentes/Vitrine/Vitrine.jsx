@@ -6,10 +6,11 @@ function Vitrine() {
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(null);
 
-  // Estados novos
+  // Estados da pesquisa e categoria
   const [busca, setBusca] = useState("");
   const [categoria, setCategoria] = useState("");
 
+  // Busca os produtos na API quando o componente carrega
   useEffect(() => {
     fetch("https://dummyjson.com/products?limit=12")
       .then((resposta) => resposta.json())
@@ -23,7 +24,7 @@ function Vitrine() {
       });
   }, []);
 
-  // Filtra os produtos pelo nome e categoria
+  // Filtra por nome e categoria
   const produtosFiltrados = produtos.filter((produto) => {
     const correspondeBusca = produto.title
       .toLowerCase()
@@ -35,41 +36,68 @@ function Vitrine() {
     return correspondeBusca && correspondeCategoria;
   });
 
+  // Mensagem de carregamento
   if (carregando) {
     return <p>Carregando produtos...</p>;
   }
 
+  // Mensagem de erro
   if (erro) {
     return <p>{erro}</p>;
   }
 
   return (
     <main className="vitrine">
+
       <h2>Nossos Produtos</h2>
 
-      {/* Campo de busca */}
-      <input
-        type="text"
-        placeholder="Pesquisar produto..."
-        value={busca}
-        onChange={(e) => setBusca(e.target.value)}
-      />
+      {/* Barra de pesquisa e filtro */}
+      <div className="filtros">
 
-      {/* Filtro de categoria */}
-      <select
-        value={categoria}
-        onChange={(e) => setCategoria(e.target.value)}
-      >
-        <option value="">Todas as categorias</option>
+        <div className="barra-busca">
 
-        {[...new Set(produtos.map((p) => p.category))].map((cat) => (
-          <option key={cat} value={cat}>
-            {cat}
-          </option>
-        ))}
-      </select>
+          <span className="icone">🔎</span>
 
+          <input
+            type="text"
+            placeholder="Pesquisar"
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+          />
+
+        </div>
+
+
+        <div className="categoria-container">
+
+          <span className="icone">📂</span>
+
+          <select
+            value={categoria}
+            onChange={(e) => setCategoria(e.target.value)}
+          >
+
+            <option value="">Categorias</option>
+
+            {[...new Set(produtos.map((p) => p.category))]
+              .map((cat) => (
+
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+
+            ))}
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      {/* Lista de produtos */}
       <div className="cards">
+
         {produtosFiltrados.map((produto) => (
           <ProdutoCard
             key={produto.id}
@@ -78,9 +106,12 @@ function Vitrine() {
             thumbnail={produto.thumbnail}
           />
         ))}
+
       </div>
+
     </main>
   );
 }
 
 export default Vitrine;
+

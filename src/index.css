@@ -19,3 +19,91 @@ button:hover {
 button:active {
     transform: translateY(1px);
 }
+/* Área dos filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+
+/* Barra de pesquisa e categoria */
+.barra-busca,
+.categoria-container {
+  display: flex;
+  align-items: center;
+  
+  background: linear-gradient(
+    135deg,
+    #243B77,
+    #15234A
+  );
+
+  border-radius: 40px;
+  padding: 10px 18px;
+
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.25),
+    inset 0 1px 3px rgba(255,255,255,0.15);
+
+  transition: 0.3s;
+}
+
+
+/* Efeito ao passar o mouse */
+.barra-busca:hover,
+.categoria-container:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.35);
+}
+
+
+/* Ícones */
+.icone {
+  font-size: 18px;
+  color: #d8dce7;
+  margin-right: 10px;
+}
+
+
+/* Campo de pesquisa */
+.barra-busca input {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #ffffff;
+  font-size: 18px;
+
+  width: 220px;
+}
+
+
+/* Texto de exemplo */
+.barra-busca input::placeholder {
+  color: #c0c6d9;
+}
+
+
+/* Campo de categoria */
+.categoria-container select {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+
+  width: 160px;
+}
+
+
+/* Opções abertas do select */
+.categoria-container option {
+  background-color: #15234A;
+  color: white;
+}

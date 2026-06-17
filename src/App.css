@@ -145,3 +145,47 @@ button:active {
   padding: 25px;
   font-size: 14px;
 }
+/* Barra de pesquisa e filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+.campo-busca,
+.campo-categoria {
+  padding: 12px 18px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Campo de busca maior */
+.campo-busca {
+  width: 320px;
+}
+
+/* Caixa de categoria */
+.campo-categoria {
+  width: 220px;
+  cursor: pointer;
+}
+
+/* Efeito ao clicar */
+.campo-busca:focus,
+.campo-categoria:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 12px rgba(0, 102, 255, 0.4);
+}
+
+/* Efeito ao passar o mouse */
+.campo-busca:hover,
+.campo-categoria:hover {
+  transform: translateY(-2px);
+}
