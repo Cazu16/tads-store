@@ -24,7 +24,7 @@ function Vitrine() {
       });
   }, []);
 
-  // Filtra por nome e categoria
+  // Filtra os produtos pela busca e categoria
   const produtosFiltrados = produtos.filter((produto) => {
     const correspondeBusca = produto.title
       .toLowerCase()
@@ -48,14 +48,11 @@ function Vitrine() {
 
   return (
     <main className="vitrine">
-
       <h2>Nossos Produtos</h2>
 
       {/* Barra de pesquisa e filtro */}
       <div className="filtros">
-
         <div className="barra-busca">
-
           <span className="icone">🔎</span>
 
           <input
@@ -64,54 +61,42 @@ function Vitrine() {
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
           />
-
         </div>
 
-
         <div className="categoria-container">
-
           <span className="icone">📂</span>
 
           <select
             value={categoria}
             onChange={(e) => setCategoria(e.target.value)}
           >
+            <option value="">
+              Categorias
+            </option>
 
-            <option value="">Categorias</option>
-
-            {[...new Set(produtos.map((p) => p.category))]
-              .map((cat) => (
-
+            {[...new Set(produtos.map((p) => p.category))].map((cat) => (
               <option key={cat} value={cat}>
                 {cat}
               </option>
-
             ))}
-
           </select>
-
         </div>
-
       </div>
-
 
       {/* Lista de produtos */}
       <div className="cards">
-
         {produtosFiltrados.map((produto) => (
           <ProdutoCard
             key={produto.id}
+            id={produto.id}
             title={produto.title}
             price={produto.price}
             thumbnail={produto.thumbnail}
           />
         ))}
-
       </div>
-
     </main>
   );
 }
 
 export default Vitrine;
-
