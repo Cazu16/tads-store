@@ -1,5 +1,5 @@
 /* ==========================
-        Configurações gerais
+        CONFIGURAÇÕES GERAIS
 ========================== */
 
 * {
@@ -8,228 +8,434 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background-color: #f3f4f6;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #111827;
+
+  background-color:#f3f4f6;
+
+  font-family:
+  Arial,
+  Helvetica,
+  sans-serif;
+
+  color:#111827;
+
 }
 
+
+
 /* ==========================
-          Cabeçalho
+          CABEÇALHO
 ========================== */
+
 
 .cabecalho {
-  background: #111827;
-  color: white;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+  background:#23365f;
+
+  color:white;
+
+  padding:20px 50px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+
 }
+
+
 
 .cabecalho h1 {
-  font-size: 28px;
+
+
+  font-size:28px;
+
+
 }
+
+
 
 .cabecalho ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
+
+
+  display:flex;
+
+  gap:30px;
+
+  list-style:none;
+
+
 }
+
+
 
 .cabecalho li {
-  cursor: pointer;
-  transition: 0.3s;
+
+
+  cursor:pointer;
+
+  transition:.3s;
+
+
 }
+
+
 
 .cabecalho li:hover {
-  color: #60a5fa;
+
+
+  color:#60a5fa;
+
+
 }
 
-/* ==========================
-            Vitrine
-========================== */
 
-.vitrine {
-  padding: 50px;
-  text-align: center;
+
+.cabecalho a {
+
+
+  color:white;
+
+  text-decoration:none;
+
+
 }
 
-.vitrine h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-  color: #1f2937;
-}
-
-/* ==========================
-            Filtros
-========================== */
-
-.filtros {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-/* Caixa da busca */
-.barra-busca {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 12px 18px;
-  border-radius: 35px;
-  width: 330px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.barra-busca .icone {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.barra-busca input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 16px;
-  background: transparent;
-}
-
-/* Caixa da categoria */
-.categoria-container {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 12px 18px;
-  border-radius: 35px;
-  width: 230px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.categoria-container .icone {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.categoria-container select {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 16px;
-  background: transparent;
-  cursor: pointer;
-}
-
-/* ==========================
-          Produtos
-========================== */
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  width: 230px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-/* Remove sublinhado dos links */
-.card a {
-  text-decoration: none;
-}
-
-.imagem-produto {
-  width: 100%;
-  height: 170px;
-  object-fit: contain;
-}
-
-.card h3 {
-  margin-top: 15px;
-  color: #111827;
-  min-height: 55px;
-  font-size: 18px;
-}
-
-.card p {
-  margin-top: 10px;
-  color: #2563eb;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* ==========================
-            Botões
-========================== */
-
-button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
-  transform: translateY(-3px);
-}
 
 /* ==========================
             Rodapé
 ========================== */
 
 .rodape {
-  margin-top: 60px;
-  background: #111827;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  font-size: 14px;
-}
 
+  width: 100%;
+
+  margin-top: 60px;
+
+  background: #111827;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 25px;
+
+  font-size: 14px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
 /* ==========================
-          Responsividade
+            VITRINE
 ========================== */
 
-@media (max-width: 700px) {
 
-  .cabecalho {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
+.vitrine {
 
-  .cabecalho ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
 
-  .barra-busca,
-  .categoria-container {
-    width: 90%;
-  }
+  padding:50px;
+
+  text-align:center;
+
+
+}
+
+
+
+.vitrine h2 {
+
+
+  font-size:32px;
+
+  margin-bottom:25px;
+
+  color:#1f2937;
+
+
+}
+
+
+
+/* ==========================
+            FILTROS
+========================== */
+
+
+.filtros {
+
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  margin-bottom:35px;
+
+  flex-wrap:wrap;
+
+
+}
+
+
+
+/* Busca */
+
+
+.barra-busca {
+
+
+  display:flex;
+
+  align-items:center;
+
+  background:white;
+
+  padding:12px 18px;
+
+  border-radius:35px;
+
+  width:330px;
+
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.barra-busca input {
+
+
+  border:none;
+
+  outline:none;
+
+  width:100%;
+
+  font-size:16px;
+
+
+}
+
+
+
+
+/* Categoria */
+
+
+.categoria-container {
+
+
+  display:flex;
+
+  align-items:center;
+
+  background:white;
+
+  padding:12px 18px;
+
+  border-radius:35px;
+
+  width:230px;
+
+
+  box-shadow:
+  0 4px 12px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.categoria-container select {
+
+
+  border:none;
+
+  outline:none;
+
+  width:100%;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+
+}
+
+
+
+/* ==========================
+          PRODUTOS
+========================== */
+
+
+.cards {
+
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:30px;
+
+  flex-wrap:wrap;
+
+
+}
+
+
+
+.card {
+
+
+  background:white;
+
+  width:230px;
+
+  padding:20px;
+
+  border-radius:15px;
+
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.15);
+
+
+  transition:.3s;
+
+
+}
+
+
+
+.card:hover {
+
+
+  transform:translateY(-8px);
+
+
+}
+
+
+
+.card a {
+
+
+  text-decoration:none;
+
+
+}
+
+
+
+.imagem-produto {
+
+
+  width:100%;
+
+  height:170px;
+
+  object-fit:contain;
+
+
+}
+
+
+
+.card h3 {
+
+
+  margin-top:15px;
+
+  min-height:55px;
+
+  font-size:18px;
+
+  color:#111827;
+
+
+}
+
+
+
+.card p {
+
+
+  margin-top:10px;
+
+  color:#2563eb;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+
+}
+
+
+
+/* ==========================
+       BOTÃO PADRÃO DA LOJA
+========================== */
+
+
+.botao {
+
+
+  margin-top:15px;
+
+  width:100%;
+
+  padding:12px;
+
+
+  background:
+  linear-gradient(
+  135deg,
+  #2563eb,
+  #1d4ed8
+  );
+
+
+  color:white;
+
+  border:none;
+
+  border-radius:10px;
+
+
+  font-size:15px;
+
+  font-weight:600;
+
+
+  cursor:pointer;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+.botao:hover {
+
+
+  transform:translateY(-3px);
+
 
 }
 /* ==========================
@@ -243,127 +449,1708 @@ button:hover {
   color: #1f2937;
 }
 
-.detalhe {
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-}
-/* ==========================
-       Página de detalhes
-========================== */
 
 .detalhe {
+
   min-height: calc(100vh - 170px);
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   padding: 50px;
+
 }
+
+
 .detalhe-card {
+
   background: white;
+
   width: 100%;
+
   max-width: 800px;
+
   display: flex;
+
   gap: 50px;
+
   padding: 40px;
+
   border-radius: 20px;
+
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  transition: 0.3s;
+
+  transition: .3s;
+
 }
+
 
 .detalhe-card:hover {
+
   transform: translateY(-5px);
+
 }
+
+
+
 .detalhe-imagem {
+
   width: 250px;
+
   height: 250px;
+
   object-fit: contain;
+
 }
+
+
+
 .detalhe-info h2 {
+
   font-size: 42px;
+
   margin-bottom: 20px;
-  color: #111827;
+
 }
+
+
 
 .detalhe-info p {
-  color: #4b5563;
-  font-size: 18px;
-  line-height: 1.8;
+
+  color:#4b5563;
+
+  font-size:18px;
+
+  line-height:1.8;
+
 }
+
+
 
 .preco {
-  color: #2563eb !important;
-  font-size: 38px !important;
-  font-weight: bold;
-  margin: 25px 0;
+
+  color:#2563eb !important;
+
+  font-size:38px !important;
+
+  font-weight:bold;
+
 }
 
+
+
 .descricao {
-  font-size: 18px;
-  color: #4b5563;
-  line-height: 1.6;
-  margin-bottom: 25px;
+
+  margin-top:20px;
+
+  font-size:18px;
+
 }
+
 
 
 .detalhe-acoes {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+
+  display:flex;
+
+  gap:15px;
+
+  margin-top:25px;
+
 }
+
+
 
 .categoria {
-  background: #e5e7eb;
-  padding: 10px 18px;
-  border-radius: 20px;
-  font-weight: bold;
+
+  background:#e5e7eb;
+
+  padding:10px 18px;
+
+  border-radius:20px;
+
+  font-weight:bold;
+
 }
+
+
 
 .voltar {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-  padding: 10px 25px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
 
-.voltar:hover {
-  transform: translateY(-2px);
-  background: #1e40af;
-}
-/* Responsividade */
+  background:#2563eb;
 
-@media (max-width: 768px) {
+  color:white;
 
-  .detalhe-card {
-    flex-direction: column;
-    text-align: center;
-  }
+  padding:10px 25px;
 
-  .detalhe-imagem {
-    width: 250px;
-    height: 250px;
-  }
+  border-radius:10px;
 
-  .detalhe-info {
-    text-align: center;
-  }
+  text-decoration:none;
 
 }
-@media (max-width: 768px) {
-  .detalhe-card {
-    flex-direction: column;
-    text-align: center;
+
+
+
+/* ==========================
+          LOGIN
+========================== */
+
+
+.login {
+
+  min-height:calc(100vh - 170px);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+
+
+.login h2 {
+
+  font-size:32px;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.login form {
+
+  background:white;
+
+  width:380px;
+
+  padding:40px;
+
+  border-radius:20px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+.login input {
+
+  width:100%;
+
+  padding:14px;
+
+  margin-bottom:20px;
+
+  border-radius:10px;
+
+  border:1px solid #d1d5db;
+
+}
+
+
+
+.login .botao {
+
+  width:100%;
+
+}
+
+
+
+.erro-login {
+
+  color:#dc2626;
+
+  margin-top:20px;
+
+}
+
+
+
+
+
+/* ==========================
+            MODAL
+========================== */
+
+
+.modal {
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.55);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:1000;
+
+}
+
+
+
+.modal-conteudo {
+
+  background:white;
+
+  width:420px;
+
+  padding:35px;
+
+  border-radius:18px;
+
+  text-align:center;
+
+}
+
+
+
+
+
+/* ==================================================
+     CORREÇÃO DOS BOTÕES DO CARRINHO
+================================================== */
+
+
+/* Botões + e - */
+
+.carrinho-container .botao-quantidade {
+
+
+  all:unset;
+
+
+  width:35px !important;
+
+  height:35px !important;
+
+
+  background:#2563eb;
+
+
+  color:white;
+
+
+  border-radius:8px;
+
+
+  font-size:18px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+}
+
+
+
+
+.carrinho-container .botao-quantidade:hover {
+
+
+  background:#1d4ed8;
+
+
+}
+
+
+
+/* Remover produto */
+
+
+.carrinho-container .botao-remover {
+
+
+  all:unset;
+
+
+  width:35px !important;
+
+  height:35px !important;
+
+
+  cursor:pointer;
+
+
+  font-size:22px;
+
+
+  color:#ef4444;
+
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+
+}
+
+
+
+
+
+
+/* Botão finalizar */
+
+
+.carrinho-container .botao-finalizar {
+
+
+  width:200px !important;
+
+
+  height:45px;
+
+
+  margin-top:15px;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  background:#22c55e;
+
+
+  color:white;
+
+
+  font-size:16px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+/* Botão limpar */
+
+
+.carrinho-container .botao-limpar {
+
+
+  width:200px !important;
+
+
+  height:45px;
+
+
+  margin-top:15px;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  background:#ef4444;
+
+
+  color:white;
+
+
+  font-size:16px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+/* ======================================
+        CUPOM E FRETE
+====================================== */
+
+
+
+.carrinho-container .botao-cupom {
+
+
+  width:150px !important;
+
+
+  height:40px;
+
+
+  padding:8px 15px;
+
+
+  margin-top:10px;
+
+
+  border:none;
+
+
+  border-radius:8px;
+
+
+  background:#2563eb;
+
+
+  color:white;
+
+
+  font-size:14px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+.carrinho-container .botao-cupom:hover {
+
+
+  background:#1d4ed8;
+
+
+}
+
+
+
+
+
+
+.carrinho-resumo input,
+.carrinho-resumo select {
+
+
+  width:100%;
+
+
+  height:42px;
+
+
+  padding:10px;
+
+
+  margin:10px 0;
+
+
+  border-radius:8px;
+
+
+  border:1px solid #d1d5db;
+
+
+  font-size:15px;
+
+
+}
+
+
+
+.carrinho-resumo input:focus,
+.carrinho-resumo select:focus {
+
+
+  outline:none;
+
+
+  border-color:#2563eb;
+
+
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+
+
+/* ==========================
+        RESPONSIVO
+========================== */
+
+
+@media(max-width:768px){
+
+
+  .detalhe-card{
+
+
+    flex-direction:column;
+
+    text-align:center;
+
+
   }
 
-  .detalhe-acoes {
-    justify-content: center;
-    flex-wrap: wrap;
+
+
+  .carrinho-layout{
+
+
+    flex-direction:column;
+
   }
 
-  .detalhe-info h2 {
-    font-size: 28px;
+
+
+  .carrinho-resumo{
+
+
+    width:100%;
+
   }
+
+
+}
+/* =====================================================
+        MINHA CONTA
+===================================================== */
+
+
+.conta-container {
+
+  min-height:calc(100vh - 170px);
+
+  padding:50px;
+
+  display:flex;
+
+  justify-content:center;
+
+}
+
+
+
+.conta-card {
+
+
+  background:white;
+
+  width:500px;
+
+  padding:40px;
+
+  border-radius:20px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+.conta-card h1 {
+
+  text-align:center;
+
+  margin-bottom:30px;
+
+  color:#111827;
+
+}
+
+
+
+.conta-info {
+
+
+  background:#f3f4f6;
+
+  padding:20px;
+
+  border-radius:12px;
+
+}
+
+
+
+.conta-info p {
+
+  margin:12px 0;
+
+  font-size:17px;
+
+  color:#374151;
+
+}
+
+
+
+
+/* =====================================================
+        FAVORITOS
+===================================================== */
+
+
+.favoritos-container {
+
+
+  padding:50px;
+
+
+}
+
+
+
+.favoritos-titulo {
+
+
+  text-align:center;
+
+  font-size:32px;
+
+  margin-bottom:40px;
+
+}
+
+
+
+.favoritos-grid {
+
+
+  display:flex;
+
+  gap:30px;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+}
+
+
+
+
+.favorito-card {
+
+
+  background:white;
+
+  width:250px;
+
+  padding:20px;
+
+  border-radius:15px;
+
+
+  box-shadow:
+
+  0 5px 15px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.favorito-card img {
+
+
+  width:100%;
+
+  height:180px;
+
+  object-fit:contain;
+
+
+}
+
+
+
+.botao-favorito {
+
+
+  width:100%;
+
+  height:40px;
+
+
+  background:#ef4444;
+
+  color:white;
+
+
+  border:none;
+
+  border-radius:10px;
+
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+
+}
+
+
+.botao-favorito:hover {
+
+
+  background:#dc2626;
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+        CHECKOUT
+===================================================== */
+
+
+.checkout-container {
+
+
+  min-height:calc(100vh - 170px);
+
+  padding:50px;
+
+
+  display:flex;
+
+  justify-content:center;
+
+
+}
+
+
+
+.checkout-card {
+
+
+  width:700px;
+
+
+  background:white;
+
+
+  padding:40px;
+
+
+  border-radius:20px;
+
+
+  box-shadow:
+
+  0 10px 30px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.checkout-card h1 {
+
+
+  text-align:center;
+
+  margin-bottom:35px;
+
+
+}
+
+
+
+.checkout-grupo {
+
+
+  margin-bottom:20px;
+
+
+}
+
+
+
+.checkout-grupo label {
+
+
+  display:block;
+
+  margin-bottom:8px;
+
+  font-weight:bold;
+
+
+}
+
+
+
+.checkout-grupo input,
+.checkout-grupo select {
+
+
+  width:100%;
+
+  height:45px;
+
+  padding:10px;
+
+
+  border-radius:10px;
+
+  border:1px solid #d1d5db;
+
+
+}
+
+
+
+
+.botao-pagamento {
+
+
+  width:100%;
+
+
+  height:50px;
+
+
+  margin-top:25px;
+
+
+  background:
+
+  linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+
+  color:white;
+
+
+  border:none;
+
+
+  border-radius:12px;
+
+
+  font-size:17px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+.botao-pagamento:hover {
+
+
+  transform:translateY(-3px);
+
+
+}
+
+
+
+
+/* =====================================================
+        HISTÓRICO DE PEDIDOS
+===================================================== */
+
+
+.pedidos-container {
+
+
+  padding:50px;
+
+
+}
+
+
+
+.pedidos-titulo {
+
+
+  text-align:center;
+
+  font-size:32px;
+
+  margin-bottom:40px;
+
+
+}
+
+
+
+.pedido-card {
+
+
+  background:white;
+
+
+  padding:25px;
+
+
+  margin-bottom:20px;
+
+
+  border-radius:15px;
+
+
+  box-shadow:
+
+  0 5px 15px rgba(0,0,0,.12);
+
+
+}
+
+
+
+.pedido-card h3 {
+
+
+  color:#2563eb;
+
+  margin-bottom:15px;
+
+
+}
+
+
+
+.status {
+
+
+  display:inline-block;
+
+
+  padding:8px 15px;
+
+
+  border-radius:20px;
+
+
+  background:#dcfce7;
+
+
+  color:#166534;
+
+
+  font-weight:bold;
+
+
+}
+
+
+
+
+
+/* =====================================================
+        ALERTAS / NOTIFICAÇÕES
+===================================================== */
+
+
+
+.alerta {
+
+
+  position:fixed;
+
+
+  top:90px;
+
+
+  right:30px;
+
+
+  background:#22c55e;
+
+
+  color:white;
+
+
+  padding:18px 25px;
+
+
+  border-radius:12px;
+
+
+  font-weight:bold;
+
+
+  box-shadow:
+
+  0 5px 20px rgba(0,0,0,.2);
+
+
+  animation:
+
+  aparecer .3s ease;
+
+
+  z-index:2000;
+
+
+}
+
+
+
+
+@keyframes aparecer {
+
+
+  from {
+
+
+    opacity:0;
+
+    transform:
+    translateY(-20px);
+
+
+  }
+
+
+  to {
+
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+
+  }
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+        MENU MOBILE
+===================================================== */
+
+
+@media(max-width:700px){
+
+
+.cabecalho{
+
+
+padding:20px;
+
+
+}
+
+
+.cabecalho h1{
+
+
+font-size:22px;
+
+
+}
+
+
+
+.vitrine{
+
+
+padding:25px;
+
+
+}
+
+
+
+.card{
+
+
+width:90%;
+
+
+}
+
+
+
+.checkout-container,
+.conta-container{
+
+
+padding:25px;
+
+
+}
+
+
+
+.checkout-card,
+.conta-card{
+
+
+width:100%;
+
+
+}
+
+
+
+}
+/* =====================================
+            CHECKOUT
+===================================== */
+
+
+.checkout-container {
+
+  min-height: calc(100vh - 170px);
+
+  padding: 50px;
+
+  background:#f3f4f6;
+
+}
+
+
+
+.checkout-container > h1 {
+
+  text-align:center;
+
+  font-size:36px;
+
+  color:#111827;
+
+  margin-bottom:40px;
+
+}
+
+
+
+
+
+
+/* =====================================
+        LAYOUT CHECKOUT
+===================================== */
+
+
+.checkout-layout {
+
+
+  max-width:1200px;
+
+  margin:auto;
+
+
+  display:grid;
+
+
+  grid-template-columns: 
+  1fr 1fr;
+
+
+  gap:25px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+          CARDS
+===================================== */
+
+
+.checkout-card {
+
+
+  background:white;
+
+
+  padding:30px;
+
+
+  border-radius:18px;
+
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.12);
+
+
+}
+
+
+
+
+.checkout-card h2 {
+
+
+  color:#111827;
+
+
+  font-size:22px;
+
+
+  margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+/* =====================================
+          INPUTS
+===================================== */
+
+
+.checkout-card input,
+.checkout-card select {
+
+
+  width:100%;
+
+
+  padding:14px;
+
+
+  margin-bottom:15px;
+
+
+  border-radius:10px;
+
+
+  border:1px solid #d1d5db;
+
+
+  font-size:16px;
+
+
+  outline:none;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+
+
+.checkout-card input:focus,
+.checkout-card select:focus {
+
+
+  border-color:#2563eb;
+
+
+  box-shadow:
+
+  0 0 0 3px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+          RESUMO PEDIDO
+===================================== */
+
+
+.checkout-resumo {
+
+
+  grid-column:2;
+
+
+  grid-row:1 / span 3;
+
+
+  background:white;
+
+
+  padding:30px;
+
+
+  border-radius:18px;
+
+
+  box-shadow:
+
+  0 8px 20px rgba(0,0,0,.12);
+
+
+  height:fit-content;
+
+
+}
+
+
+
+
+
+
+.checkout-resumo h2 {
+
+
+  font-size:24px;
+
+
+  margin-bottom:25px;
+
+
+  color:#111827;
+
+
+}
+
+
+
+
+
+.checkout-resumo p {
+
+
+  color:#4b5563;
+
+
+  margin:12px 0;
+
+
+  font-size:16px;
+
+
+}
+
+
+
+
+
+.checkout-resumo hr {
+
+
+  margin:25px 0;
+
+
+  border:none;
+
+
+  border-top:1px solid #e5e7eb;
+
+
+}
+
+
+
+
+
+
+
+.checkout-resumo h3 {
+
+
+  font-size:28px;
+
+
+  color:#2563eb;
+
+
+  margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================
+        BOTÃO FINALIZAR CHECKOUT
+===================================== */
+
+
+.checkout-resumo .botao-finalizar {
+
+
+  width:100% !important;
+
+
+  height:50px;
+
+
+  background:
+
+  linear-gradient(
+  135deg,
+  #22c55e,
+  #16a34a
+  );
+
+
+  color:white;
+
+
+  border:none;
+
+
+  border-radius:12px;
+
+
+  font-size:17px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+.checkout-resumo .botao-finalizar:hover {
+
+
+  transform:translateY(-3px);
+
+
+  background:#15803d;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+          RESPONSIVIDADE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+.checkout-layout{
+
+
+  grid-template-columns:1fr;
+
+
+}
+
+
+
+.checkout-resumo{
+
+
+  grid-column:auto;
+
+
+  grid-row:auto;
+
+
+}
+
+
+.checkout-container{
+
+
+  padding:25px;
+
+
+}
+
+
+
+}
+/* ===============================
+          TOAST
+================================ */
+
+
+.toast {
+
+
+position:fixed;
+
+
+top:100px;
+
+
+right:30px;
+
+
+background:#22c55e;
+
+
+color:white;
+
+
+padding:18px 25px;
+
+
+border-radius:12px;
+
+
+font-size:16px;
+
+
+font-weight:bold;
+
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.2);
+
+
+
+z-index:9999;
+
+
+
+animation:
+
+aparecer .3s ease;
+
+
+}
+
+
+
+
+@keyframes aparecer {
+
+
+from{
+
+opacity:0;
+
+transform:
+translateX(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0);
+
+}
+
+
+}
+/* ==========================
+        FAVORITOS
+========================== */
+
+.card{
+  position: relative;
+}
+
+.botao-favorito{
+
+  position:absolute;
+
+  top:12px;
+
+  right:12px;
+
+  width:38px;
+
+  height:38px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:white;
+
+  font-size:22px;
+
+  cursor:pointer;
+
+  box-shadow:0 2px 8px rgba(0,0,0,.2);
+
+  transition:.25s;
+
+}
+
+.botao-favorito:hover{
+
+  transform:scale(1.15);
+
 }

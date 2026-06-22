@@ -1,6 +1,6 @@
 function Botao({ texto }) {
   return (
-    <button>
+    <button className="botao">
       {texto}
     </button>
   );

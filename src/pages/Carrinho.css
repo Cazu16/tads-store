@@ -1,0 +1,930 @@
+/* =====================================
+              CARRINHO
+===================================== */
+
+
+.carrinho-container {
+
+  padding: 40px;
+
+  background: #f3f4f6;
+
+  min-height: calc(100vh - 170px);
+
+}
+
+
+
+/* =====================================
+              TÍTULO
+===================================== */
+
+
+.titulo-carrinho {
+
+  text-align: center;
+
+  font-size: 36px;
+
+  margin-bottom: 40px;
+
+  color:#111827;
+
+}
+
+
+
+/* =====================================
+              LAYOUT
+===================================== */
+
+
+.carrinho-layout {
+
+  display:flex;
+
+  gap:30px;
+
+  align-items:flex-start;
+
+}
+
+
+
+/* =====================================
+              LISTA
+===================================== */
+
+
+.carrinho-lista {
+
+  flex:2;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
+}
+
+
+
+
+.carrinho-item {
+
+
+  background:white;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+
+  padding:20px;
+
+  border-radius:15px;
+
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.12);
+
+}
+
+
+
+
+.carrinho-item img {
+
+
+  width:100px;
+
+  height:100px;
+
+  object-fit:contain;
+
+
+}
+
+
+
+
+/* =====================================
+              INFORMAÇÕES
+===================================== */
+
+
+.info {
+
+  flex:1;
+
+}
+
+
+
+.info h3 {
+
+  font-size:18px;
+
+  margin-bottom:10px;
+
+}
+
+
+
+.info p {
+
+  margin:5px 0;
+
+  color:#4b5563;
+
+}
+
+
+
+/* =====================================
+              QUANTIDADE
+===================================== */
+
+
+.quantidade {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+}
+
+
+
+.quantidade span {
+
+  font-size:18px;
+
+  font-weight:bold;
+
+}
+
+
+
+/* BOTÕES + E - */
+
+.carrinho-container .botao-quantidade {
+
+
+  all:unset;
+
+
+  width:35px !important;
+
+  height:35px !important;
+
+
+  background:#2563eb;
+
+
+  color:white;
+
+
+  border-radius:8px;
+
+
+  font-size:20px;
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+
+}
+
+
+
+.carrinho-container .botao-quantidade:hover {
+
+
+  background:#1d4ed8;
+
+
+  transform:scale(1.1);
+
+
+}
+
+
+
+/* =====================================
+              REMOVER
+===================================== */
+
+
+.carrinho-container .botao-remover {
+
+
+  all:unset;
+
+
+  width:40px;
+
+
+  height:40px;
+
+
+  cursor:pointer;
+
+
+  font-size:22px;
+
+
+  color:#ef4444;
+
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+
+}
+
+
+
+.carrinho-container .botao-remover:hover {
+
+
+  transform:scale(1.15);
+
+  color:#b91c1c;
+
+
+}
+
+
+
+
+/* =====================================
+              RESUMO
+===================================== */
+
+
+.carrinho-resumo {
+
+
+  flex:1;
+
+
+  background:white;
+
+
+  padding:30px;
+
+
+  border-radius:15px;
+
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.12);
+
+
+}
+
+
+
+
+.carrinho-resumo h2 {
+
+
+  font-size:25px;
+
+  margin-bottom:25px;
+
+
+}
+
+
+
+/* textos */
+
+.carrinho-resumo p {
+
+
+  margin:12px 0;
+
+  color:#4b5563;
+
+
+}
+
+
+
+/* =====================================
+              FRETE
+===================================== */
+
+
+.titulo-opcao {
+
+
+  margin-top:25px;
+
+
+  margin-bottom:10px;
+
+
+  font-size:20px;
+
+
+  color:#111827;
+
+
+}
+
+
+
+.carrinho-resumo select {
+
+
+  width:100%;
+
+
+  height:45px;
+
+
+  padding:0 15px;
+
+
+  border-radius:10px;
+
+
+  border:1px solid #d1d5db;
+
+
+  background:white;
+
+
+  font-size:15px;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+.carrinho-resumo select:focus {
+
+
+  border-color:#2563eb;
+
+
+  outline:none;
+
+
+}
+
+
+
+
+
+/* =====================================
+              CUPOM
+===================================== */
+
+
+
+.carrinho-resumo input {
+
+
+  width:100%;
+
+
+  height:45px;
+
+
+  padding:0 15px;
+
+
+  margin-top:10px;
+
+
+  border-radius:10px;
+
+
+  border:1px solid #d1d5db;
+
+
+  font-size:15px;
+
+
+}
+
+
+
+.carrinho-resumo input:focus {
+
+
+  outline:none;
+
+
+  border-color:#2563eb;
+
+
+}
+
+
+
+
+/* BOTÃO APLICAR CUPOM */
+
+
+.carrinho-container .botao-cupom {
+
+
+  width:100% !important;
+
+
+  height:45px !important;
+
+
+  margin-top:15px;
+
+
+  padding:0 !important;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  background:
+  linear-gradient(
+  135deg,
+  #2563eb,
+  #1d4ed8
+  );
+
+
+  color:white;
+
+
+  font-size:15px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+.carrinho-container .botao-cupom:hover {
+
+
+  background:#1e40af;
+
+
+}
+
+
+
+/* mensagem cupom */
+
+
+.resultado-cupom {
+
+
+  margin-top:15px;
+
+
+  padding:12px;
+
+
+  background:#f3f4f6;
+
+
+  border-radius:10px;
+
+
+}
+
+
+
+
+/* =====================================
+              TOTAL
+===================================== */
+
+
+.valor-total {
+
+
+  margin-top:25px;
+
+
+  font-size:28px;
+
+
+  color:#2563eb;
+
+
+}
+
+
+
+/* =====================================
+              BOTÕES FINAIS
+===================================== */
+
+
+
+.carrinho-container .botao-finalizar,
+
+
+.carrinho-container .botao-limpar {
+
+
+  width:100% !important;
+
+
+  height:45px !important;
+
+
+  margin-top:15px;
+
+
+  padding:0 !important;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  color:white;
+
+
+  font-size:16px;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+.botao-finalizar {
+
+
+  background:
+  linear-gradient(
+  135deg,
+  #22c55e,
+  #16a34a
+  );
+
+
+}
+
+
+
+.botao-finalizar:hover {
+
+
+  background:#15803d;
+
+
+}
+
+
+
+
+
+.botao-limpar {
+
+
+  background:
+  linear-gradient(
+  135deg,
+  #ef4444,
+  #dc2626
+  );
+
+
+}
+
+
+
+.botao-limpar:hover {
+
+
+  background:#b91c1c;
+
+
+}
+
+
+
+/* =====================================
+              VAZIO
+===================================== */
+
+
+.carrinho-vazio {
+
+
+  text-align:center;
+
+
+  margin-top:60px;
+
+
+  font-size:20px;
+
+
+}
+
+
+
+/* =====================================
+              RESPONSIVO
+===================================== */
+
+
+@media(max-width:768px){
+
+
+.carrinho-layout{
+
+
+flex-direction:column;
+
+
+}
+
+
+
+.carrinho-item{
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+.carrinho-resumo{
+
+
+width:100%;
+
+
+}
+
+
+}
+/* =====================================
+   CORREÇÃO FINAL BOTÕES DO CARRINHO
+===================================== */
+
+
+/* Remove influência do Link */
+
+.link-finalizar {
+
+  text-decoration: none;
+
+  display: block;
+
+}
+
+
+
+
+/* FINALIZAR COMPRA */
+
+.carrinho-container .botao-finalizar {
+
+
+  width: 100% !important;
+
+  max-width: 250px;
+
+  height: 45px !important;
+
+
+  padding: 0 !important;
+
+
+  margin: 15px auto 0 auto !important;
+
+
+  display: block;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  background:linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+
+  color:white;
+
+
+  font-size:15px !important;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+/* LIMPAR CARRINHO */
+
+
+.carrinho-container .botao-limpar {
+
+
+  width:100% !important;
+
+  max-width:250px;
+
+
+  height:45px !important;
+
+
+  padding:0 !important;
+
+
+  margin:15px auto 0 auto !important;
+
+
+  display:block;
+
+
+  border:none;
+
+
+  border-radius:10px;
+
+
+  background:linear-gradient(
+    135deg,
+    #ef4444,
+    #dc2626
+  );
+
+
+  color:white;
+
+
+  font-size:15px !important;
+
+
+  font-weight:bold;
+
+
+  cursor:pointer;
+
+
+}
+
+
+
+
+
+
+.carrinho-container .botao-finalizar:hover {
+
+
+  transform:translateY(-3px);
+
+}
+
+
+
+.carrinho-container .botao-limpar:hover {
+
+
+  transform:translateY(-3px);
+
+}
+/* ==========================
+   ORGANIZAÇÃO DOS VALORES
+========================== */
+
+
+.linha-resumo {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin:15px 0;
+
+  font-size:16px;
+
+}
+
+
+.linha-resumo strong {
+
+  color:#111827;
+
+}
+
+
+
+.desconto strong {
+
+  color:#dc2626;
+
+}
+
+
+
+.total-final {
+
+
+  margin-top:25px;
+
+  padding-top:20px;
+
+  border-top:2px solid #e5e7eb;
+
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+
+  font-size:24px;
+
+  font-weight:bold;
+
+}
+
+
+
+.total-final strong {
+
+  color:#2563eb;
+
+}
+
+
+
+.mensagem-cupom {
+
+  margin-top:10px;
+
+  font-size:14px;
+
+  color:#16a34a;
+
+}
